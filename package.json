@@ -8,7 +8,7 @@
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --watch --postcss",
     "build": "run-s clean build:eleventy build:postcss",
-    "build:postcss": "NODE_ENV=production postcss src/styles/*.css --dir _site",
+    "build:postcss": "NODE_ENV=production postcss src/assets/css/*.css --dir _site",
     "build:eleventy": "ELEVENTY_ENV=production eleventy",
     "build:prod": "npm run build:eleventy & npm run build:postcss",
     "clean": "rimraf _site"
@@ -24,10 +24,14 @@
     "@tailwindcss/typography": "^0.5.2",
     "alpinejs": "3.10.4",
     "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.13",
     "eleventy-plugin-lazyimages": "^2.1.2",
     "markdown-it": "^13.0.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "rimraf": "^3.0.2",
     "tailwindcss": "^3.1.3"
   }
 }
