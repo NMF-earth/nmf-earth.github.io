@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all -p dev:*",
-    "build": "run-s build:*",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --watch --postcss",
-    "build:11ty": "eleventy",
-    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --postcss"
+    "build": "run-s clean build:eleventy build:postcss",
+    "build:postcss": "NODE_ENV=production postcss src/styles/*.css --dir _site",
+    "build:eleventy": "ELEVENTY_ENV=production eleventy",
+    "build:prod": "npm run build:eleventy & npm run build:postcss",
+    "clean": "rimraf _site"
   },
   "keywords": [
     "eleventy",
