@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <!-- https://favicon.io/ -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <title>NMF.earth
+     - Hacktoberfest 2021
+    
+  </title>
+  <meta name="description" content="
+      
+        Hacktoberfest 2021 contribution guide
+      
+    ">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+  <body>
+    <main class="font-sans leading-normal tracking-normal pb-10 main-container">
+      
+    <div class="sticky top-0 flex justify-center pt-10">
+        
+    <div class="inline-block items-center badge font-medium flex text-gray-500">
+      
+    <a aria-label="back" href="/articles" class="flex no-underline hover:hover-link items-center">
+      
+    <div class="mr-2">
+      
+    <svg class="self-center" width="24px" height="24px" viewBox="0 0 512 512">
+      <title>Arrow Back</title>
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400 100 256l144-144M120 256h292"></path>
+    </svg>
+    </div>
+    <div>
+      <span class="select-none pt-1 pl-1 text-xl font-regular">
+        Back to articles
+      </span>
+    </div>
+  
+    </a>
+  
+    </div>
+    
+    </div>
+    <div class="flex justify-center pt-0 lg:pt-8">
+        <article class="prose lg:prose-xl divide-y">
+            <div>
+                <h1 class="font-bold mt-12 mb-10">
+                    Hacktoberfest 2021
+                </h1>
+                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAIAAADqEDFSAAAACXBIWXMAAAsTAAALEwEAmpwYAAAErklEQVR4nDXUZ2/bVhQGYP3lfslP6Mc0aJOgQRMkRUYTN5a3ZWuZ5OXmvbzcIrVImZoUNThFDQdFnPT8gAfnPTh4SxRRhpA6Pv764uXzJ09+efbs1+urT5radF0R44YESSSLk+kkzdL9fn84HFzPNW2NEQheAgjDvtsvtsXDw8O3b99KjXpZVQRREuuN+tt3b74cfbiuHCPUNAwSogZEtKor83CeZOn+sE+zrN1tayYGXBMpgqLh8WRcFP9b1epFq2UEs8n9oA9FnqZBtVYRxCbHV0TYkBDrdJx1FGWb/PBwCMK5ZRtQ4QHXVA3ZMI1gHiyXyyzLdrtdieXowcDNklU891czb+K7uoExBhS4gIjCKhxNxmmWbrfFdrf1Bq7RUtnHgLqp9l13HUWLxSJJkqIoSr1ed7GYb/MoW9xnoe/3bcvColgH9BXCrGWbcRIXxeZw2Mdx5HRaqgEB25BV0WwZs2C2jqJ5GK7X6yzLSstFmMTrTR5tolmymHRaiqYLNLgE/E0TNrk27q9GYbYq9sV0OrZsXZIZwDYUDXW6nSzPi6LYbDbr9ToIglKepVmaZGmSZ3EQTA1DxpiiyHMg1OoSId6bWtjTw54deshWFANJMs1JpCCxiqrM5/M4jjdFMZlOW3ar1A68+3C0iJZxmrgDV9VEhJqSeMMI1XPisoKIRovnfUPwdKBxosohhRFlQDFNmgWqrjptZ+DfG5ZJArLE+4Y0tNRpx5r0oYkQBpJ4K/CVWu2kcnt6R9fuRKKKiDPm5parMRIhq+wdqB4df/7w+X357JikSRFJnMQTNFG6a0ugK3P3OtORKUwJYl3gK5LUOD37/O7vV89fPP346W21fkUyDUlhOEggzN5R9ZPz8l9vXv32+9PXb1+fXJwAnoYaKrWHrul34MBsqDQB64C+5NgKoGtX1+dfy1/+fPXHX29efvznXa1+gTAQIAlljmZpgiL/LX99/+n90fHRdbXCy4LjOaXpdBqGoT8eIk0SYJMkTnmhziNWxIhiwPHJ8elZ+eLyhBcJiCmIaaxCp+0MxyNFU2mWua1XSZpEuuyOvZKiyO22Y1mmgnlJqAHqnJcISYXexB9ORz23r+oaQTV5iQJsDWFWUeXhaJRkaZTG6yRudztYV35aLF0VBYJlmlBscswVy1QECPS2NVkGi3iVZIk/9BUNCZCimKqsCIalh2EYx3GWZ3ESd3odzdI1W/ODYYmmyiy4YOlLBdV55lLgG5IseP79IlrFaRx9/3VH0SSaq3PCHVZht9ddrdfrKMrzfBbMLKeFDWz37VE4KvXbpGM2bKPR0hsCVxFEUrO0YBUmWbrZFovl0mzpssKR9A2UWVXDk+kkepw4Sfqeq1uGbMju2B3OhyWvQw269NBlH62qILFdz03ybLvb7g/78WRsWIoIScDWFE2yHTuK4yRN8zxfrpZO21FN9UfAn5bXBV4XyFKFF5qSAkfBLN3k+8N+u9323Z5hyoCtipDSTWU8Hm+326IodrvddDqxbBPr2PGc0Xz0/V4/9uq3SYG7EiAlG+psvYofWzTLc6djGxYkwDVWedPSoyg6PDx8L9j93vcHpm3IuuyO3OGj9R+9RKAMDIFVjAAAAABJRU5ErkJggg==" alt="hacktoberfest-nmf-earth" data-src="/assets/images/blog/2021/hacktoberfest-nmf-earth.png" class="lazyload" width="1400" height="1050"></p>
+<h1>Hacktoberfest 2021</h1>
+<p>Do you want to contribute to a beautiful <strong>React Native</strong> app for hacktoberfest 2021? Search no more, help the fight against climate change right now.</p>
+<h2>What is NMF.earth? 🌍</h2>
+<p>It’s an app to <strong>understand</strong> and <strong>reduce</strong> your <strong>carbon footprint</strong>. Free and open-source, available in 10 languages for both <a href="https://apps.apple.com/us/app/nmf-earth/id1494561829">iOS</a> and <a href="https://play.google.com/store/apps/details?id=nmf.earth">Android</a>, it’s built with Expo, Redux Toolkit and Typescript. You can see the design on <a href="https://www.figma.com/community/file/967052407514062912">Figma community.</a></p>
+<p>NMF.earth app in numbers :</p>
+<ul>
+<li>758 commits</li>
+<li>331 <a href="https://github.com/NMF-earth/nmf-app/runs/3752258911?check_suite_focus=true">tests,</a> 126 snapshots</li>
+<li>248 stars ⭐️</li>
+<li>33 amazing contributors 🧑‍💻</li>
+<li><a href="https://github.com/NMF-earth/nmf-app/releases">8 major versions since</a> the first one in April 2020</li>
+<li>0 crash in prod</li>
+</ul>
+<h2>What’s in for me? 🎁</h2>
+<p>In addition to digital ocean gift, I’ve tagged some issues like this <a href="https://github.com/NMF-earth/nmf-app/issues/319">one</a> with a <em>Stickers</em> tag. If you complete any of these issues, you will receive a set of 3 gorgeous stickers made by <a href="https://jenny-lelong.com/">Jenny Lelong</a>. Usually you can buy them <a href="https://ko-fi.com/s/6f2a17f053">here</a>, but this time it’s on me, from my own pocket, including the delivery.<br>
+<strong>Note</strong>: If you have been working on a large task without the stickers tag but still want one, feel free to ask me for some free stickers there should be no problem 👍</p>
+<h2>What is the goal of this hacktoberfest?</h2>
+<p>I would love to finish the <a href="https://github.com/NMF-earth/nmf-app/issues/269">eco-score</a> feature (scan a bar code from a product to get its carbon footprint) and also complete the <a href="https://github.com/NMF-earth/nmf-app/issues/254">recurring emissions</a> feature.<br>
+Beside these two big features, there is also some smaller tasks like the language change <a href="https://github.com/NMF-earth/nmf-app/issues/249">mechanism,</a> <a href="https://github.com/NMF-earth/nmf-app/issues/325">FAQ</a> screen and some other tiny <a href="https://github.com/NMF-earth/nmf-app/labels/hacktoberfest">issues</a> in the backlog.</p>
+<h2>Contributions</h2>
+<p>Except if you already have merged some good code in this repo, I won’t assign any issue due to spam and beginners unable to complete a PR without a lot of help from my side — I do this app on my free time.<br>
+However, feel free to leave a comment if you are working on an issue.</p>
+<p>Happy hacking on <a href="https://github.com/NMF-earth/nmf-app">Github</a> ✌️</p>
+<p>Pierre Bresson, founder of <a href="https://nmf.earth">NMF.earth</a></p>
+
+                <div class="mb-10 mt-20">
+                    <p class="font-light mb-5 italic text-gray-800">Published : Oct 6, 2021</p>
+                    <div class="flex flex-wrap">
+                        
+                            <p class="badge mb-3 font-light select-none">hacktoberfest</p>
+                        
+                            <p class="badge mb-3 font-light select-none">React Native</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Expo</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Climate Change</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Climate action</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+                <div div="flex">
+                    <a aria-label="donate" target="_blank" href="https://ko-fi.com/pierrebresson">
+                        <p class="mt-3">Donate to NMF.earth</p>
+                    </a>
+                </div>
+            
+        </article>
+    </div>
+
+    </main>
+  
+<script>
+            (function (selector, src, preferNativeLazyLoad) {
+  var images = document.querySelectorAll(selector);
+  var numImages = images.length;
+
+  if (numImages > 0) {
+    if (preferNativeLazyLoad && 'loading' in HTMLImageElement.prototype) {
+      for (var i = 0; i < numImages; i++) {
+        var keys = ['src', 'srcset'];
+
+        for (var j = 0; j < keys.length; j++) {
+          if (images[i].hasAttribute('data-' + keys[j])) {
+            var value = images[i].getAttribute('data-' + keys[j]);
+            images[i].setAttribute(keys[j], value);
+          }
+        }
+      }
+
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = src;
+    document.body.appendChild(script);
+  }
+})(
+              'img',
+              'https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js',
+              false
+            );
+          </script></body></html>

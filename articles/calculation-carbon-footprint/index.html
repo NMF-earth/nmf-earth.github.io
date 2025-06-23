@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <!-- https://favicon.io/ -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <title>NMF.earth
+     - How do we calculate your carbon footprint? 🐾
+    
+  </title>
+  <meta name="description" content="
+      
+        Some explanation on how do we calculate your carbon footprint
+      
+    ">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+  <body>
+    <main class="font-sans leading-normal tracking-normal pb-10 main-container">
+      
+    <div class="sticky top-0 flex justify-center pt-10">
+        
+    <div class="inline-block items-center badge font-medium flex text-gray-500">
+      
+    <a aria-label="back" href="/articles" class="flex no-underline hover:hover-link items-center">
+      
+    <div class="mr-2">
+      
+    <svg class="self-center" width="24px" height="24px" viewBox="0 0 512 512">
+      <title>Arrow Back</title>
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400 100 256l144-144M120 256h292"></path>
+    </svg>
+    </div>
+    <div>
+      <span class="select-none pt-1 pl-1 text-xl font-regular">
+        Back to articles
+      </span>
+    </div>
+  
+    </a>
+  
+    </div>
+    
+    </div>
+    <div class="flex justify-center pt-0 lg:pt-8">
+        <article class="prose lg:prose-xl divide-y">
+            <div>
+                <h1 class="font-bold mt-12 mb-10">
+                    How do we calculate your carbon footprint? 🐾
+                </h1>
+                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAIAAACn2JBZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFF0lEQVR4nAEMBfP6ALaxqcW/t9vTzOXc1N/X0ODY0e3m4fz28/339Pfu6efc1MzEu6urpo2XmH6OkniLkHeLkXeMkn+Sl5OeoKaqqLCvqrOwqrOup7WupgDKwrjPxbvWy8DXyr/Wyr/c0cfq4dn48Oz79fH37unp3dXYzcPDvbWsrqyepaWXoKGXoaKXoaKdpqeqrqy1tK+3tK21saizraSzrKMA0sa6z8G0yLmqvq+gwbKjz8Cz4NPH7ePa9Ork9Oni697U4tPI18u/ycK6wb23vLq0vLmzt7WwtrSvurWuurSrta+lrqedqaKXp6CVAMi6rcO1p7aomKiZiambireomMq7q9fIu9/Sx+HUydfJvM6/sMu8rcm9sMe9sb61qrivpbOrobOsobGpnqujl6SckJyViZWOgo+IfACypZe2qZywpZinm42kl4itno64qJe8rJ29r6C+sKK3qpuxo5SvoJCun46pm4uYjoCLhXmHgXaJg3iFgHV+em55dWp1cWZwbWFqZ1wAppiJr6OVsaaasaeasKSWsqSUr6CPppiIoJSEnpKCnI9/m4t4modzmYNsj3pleWpXZF1OXlpNZWBSZ2FTZF1QX1pNWVZKUVBGSUpAAJWIeKCUhquhlbeuor6zp8C0p7aqnKecjZiOf46DdIt8aop2YYdvWIJoUHliSmtZQ15QPlpQP19TQmJVQ19RQFpOPVRKOkpENUM/MQCFeWmRhHWjlYawpJe2q5+0qZ2soZShlYeUh3eNfWqLdV+McViLbVKHaU6DZkx9Ykl1XEN4YUp6ZE15Y01uWUNjUDtaSzhNQjJFPS4AgnZmin5tmIt6nZCBm4+BlIl7jYJ0inxsgnJffWhTeWFJe2FIgGZMgWlRgWpTgGlTgGdOiXBYiHFagmxWbVlEXUs3VUc0TUEwSkAwAIJ2ZIN2ZYJ2ZntwYW1kVWJaTF1VRmRYSGpbSXNgTHhlUIJtWIl0Xop2YYRxXntrWXFhT3JjUW1fTmNYSFBHOEE6LDo2KTUyJTQyJgCAcmB1alloYFFoYFFjW0xlXE1mXE5vZFR2alqAc2KAc2N6bl9tY1VoYFJkXVBeWU1WUkZRTkJKSDxCQDU4NywuLyUqKyEnKSAoKSAAc2dVZ15OXVZIamFSa2NUb2dYamNWbGZZd29jj390nod8knxxb2NYVFBGQ0Q7PD42NzoyMzYtLzIqKy4mKSwkJioiIycgISUdHyMcAGxiUmFaS11XSWhgUWhgUmVcUFtWS19bT3ZqX5d/dKCAd4JqYVNKQTY2LSgsJCQoISUpIiYqIiUpIiQoISInICEmHyMmHyIlHiIkHQBpYFFhWkxfWUxVUERIRDk2MysoKCItLiZQRTxxWlF8XlZgSkNANi8rKiMfJBwZHxgZHhgaHxkbIBodIRoeIhsmJyAvLCQtKiIkJR4AZ11PX1dKV1JFNzcuIyQdDxEMCw8LFxoUOTEpSz41RTcwKCQeHR0YHB4YGx8YFBoTExkTFBoTFBoUFhwVIiMcLysjNi8nKyggHyAZAFZPQldRRVFNQS0uJhYZEwgLBwoMCA4RCx4dFiMiGyAfGRYYEhYYExgbFRYbFRMYEhMYEhQZExQZExUbFCEiGzAsJDYvJyonHxodFgBIRDlQTEBMST0rLCQSFQ8HCgUHCgUICwYNEAsUFhAaHBUgIhojJR0fIhoXGxURFxESFxETGBISGBIVGhQiIhstKSExLCQlJBwbHRZA0hfLTgYLogAAAABJRU5ErkJggg==" alt="plane" data-src="/assets/images/blog/2020/plane.png" class="lazyload" width="1400" height="933"></p>
+<h1>How do we calculate your carbon footprint? 🐾</h1>
+<p>It’s important to say that there is no perfect calculation method because there are too many parameters to take into account, such as the weather which can drastically influence plane fuel consumption and some parameters, that we can’t predict like the lifespan of a car for example.</p>
+<p>However, what is important is the order of magnitude in order to compare and reduce our carbon footprint. All coefficients used <a href="https://nmf.earth/">in our app</a> are from <a href="https://static.ducky.eco/calculator_documentation.pdf">Ducky</a> and <a href="https://www.bilans-ges.ademe.fr/">Ademe</a>.</p>
+<p><em>NMF.earth is an</em> <a href="https://github.com/NMF-earth/nmf-app"><em>open-source</em></a> <em>mobile application for</em> <a href="https://apps.apple.com/us/app/nmf-earth/id1494561829"><em>iOS</em></a> <em>and</em> <a href="https://play.google.com/store/apps/details?id=nmf.earth"><em>Android</em></a><em>. It’s a carbon diary, where you can track and analyze your CO2 emissions in order to reduce your carbon footprint.</em></p>
+<h2><strong>Transport</strong></h2>
+<p>Very simple, knowing the amount of kilometres you have travelled, you simply multiply it by the coefficient of your vehicle. For example, fossil fuelled cars coefficient is 257 gCO2/eq per km which means that you emit around 2,6 kg of CO2 every 10 kilometres.</p>
+<p><strong>For planes</strong></p>
+<p>Knowing the length of the flight allow us to know what kind of flight you had: small, medium or long haul. Knowing the average speed on these flights we deduct the distance and therefore the emission by multiplying by the corresponding coefficient.</p>
+<h2><strong>Food</strong></h2>
+<p>We simply multiply the weight by the corresponding food ingredient coefficient.</p>
+<h2><strong>Electricity</strong></h2>
+<p>We know thanks to <a href="https://www.electricitymap.org/map">Electricity Map</a> the carbon intensity of electricity of your country. Since we know how much watt hour you have consumed, you do a simple multiplication with your local carbon intensity to know your electricity emission.</p>
+<h2><strong>Streaming</strong></h2>
+<p>This is tricky. We use an improved version of the 1-byte model made by <a href="https://theshiftproject.org/">The Shift Project</a>.</p>
+<p>Knowing the duration and the type of streaming service you have consumed (high definition film, music…) we deduct the quantity of data (dataWeight) you have downloaded on your device.</p>
+<p>The total amount of CO2 emitted is the following (<em>GHG : greenhouse gases)</em> :</p>
+<p><strong>GHGdataCenter + GHGnetwork + GHGdevice</strong></p>
+<p>And these elements are defined in these terms :</p>
+<p><strong>GHGdataCenter</strong> = dataWeight x FactorDataCenter x electricity.world;</p>
+<p><strong>GHGnetwork</strong> = dataWeight x FactorNetwork x electricity.world;</p>
+<p><strong>GHGdevice</strong> = duration x FactorDevice x electricity[carbonElectricityIntensity];</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAIAAADqEDFSAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFNUlEQVR4nCXO+3PSBgDA8fxF+2E/7G6b5216brabWu10rlUs2AePAIEQSEggQAKBvFOgBUIg0JQ3lNZCH1bb+jjfWt108/R2c962237xX9ipd5+fv/cFvjt6ZHLSDHqjPkL0h6UAqQRIxU8qSHjeF1K8uOzBBHcg5UJohydic4dmQWIWJOacYas7YvNQDjjhRBinLw7CFHB6dNRkmgW9URjnkZAYIGU0oqCRD8Ww7A+JCM75gkkEo+FAFPKFQYhwvBcGvVEXQkOBpBdj4SDrxVLA5NkfL0+DoDfqQZMwzgXCEkp+JGKkgJF8kGSjsRTHshmZT0scl2KoGI2HKBSnAziDhjiMFIJRCY/KwNQF8/QsZINIEKagAOPDOT/B+0NcIMSioRROpqg4l1Gkhp7e6uZ21wpb3VyrmslnJYHj4wkuRvNkjCcpMUJJgNk0PT3nsUIRhzfm9ifgIOvDOYTg/EQKDSUjFKvIUsfI3dkqv75X+/tp6+2T1tP95Y1uUVczsigySZ6K81RCijMyMHXR8uEr6oBpCE0hIRGNyNh7YjjGC4Jcq+RuDCu/3an/86z97mXv3cuVPw86D64trdTyi2k5yXAUzcUZKZlSALPJMmeDnUjcg7E4tUDzOjtfS8nVlKQJcr5ULAy65Ye79dcPOn89W/nvxeq/z/tvnnQO9paH7YKalVNMKp7gmaSUYhXAfNFstXmhQMIfFmmhoqj9orGtVgdquVvWjV6rujc0ntxov7zf/+Ng8Pbn4ZunV1496B3s166taoaWTsuyJGUFMcuyCnD+3OTlGZfHT6NhgZH0bGnVaO/WOtcbrfVWo7Heq+5vGA/3Ws/v9F89Gv5+sPX68cav9/qP9+r76+V+Xa2W1EKhLEmLNM0BZ8bOmaZsTi/pReN4TGEELZNvFvWuYTTb9aVhr3Jjc/n+9ebTW73nd9de3Fv/5e6VJze7d3dqu+v6oFvuNJZKpUqCESEPCpw8MX7BNOeACLcvggQTRERIcguZBa1cKjeM0lq7vLO+dGu7dv9689Fe6/F+6+Fu887V2v6wut0vD7qVXtNQ8wUMC09MWoAzY+OXpuZADwH5SASl8DCTYERFyWqFfGNJW23p22tLu0Pj5pZxe8u4vVm9uaHvrpev9kuDjrbaLHVqei4773Z7j4+eAX44fcZimYPgEIJG8VCCojlBmF/I5nSt2FgqrTTKg66+2S9vr5Z21ko7q9pOv7jZVQdtdbVR6NXU9rKWzygg6Pr66ChwduzktHka9gUxjIxE4qkkPy/P5xcX9GK+UVV7Ne1KSxt0isNOYbP33lZP3eio6+1iv672asXOcrGQkUCb7fDho8C5U9/PmC2IDyXwMBWleJbNKHJhMauri3U93zEK/XphrZG/0swN2rlhJ7/RVTc6xUFHW2tq/YbWXVYLac5tvfzNV4eB8dFj5guTkAtCkUAoGKSiETYRl7hUWuJyaUFbEPW8VC2IhiosF4W6JjbLSrOSblaydT3bqOQMLZvm4+5Z09ixQ8CJI19OjJ+asVwG7Q6nA/S4IQSGMT9CYP4IjtJhLBnDWRrn6SBPY0I8KDKEwIS5BMklIhJL80w0RgTsU+cmRg8BI4c+/enUyNzURchhA61W0GYD7Xanw+5y2N2gw+MCfZDTB4Fep9XrtCJuO+6H8ABMoAiB+mmSiBIY7nPPTIydH/kcGPniE9Pp4+7ZSzjsRFwOr9MBOexuh91lt30EgXaX3WqdtthmLC7bLAq7g34fjgbwgJ8KBUnMj3nB6fMnzn/72f9B+gYPF6GPwAAAAABJRU5ErkJggg==" alt="streaming-carbon-footprint" data-src="/assets/images/blog/2020/streaming-carbon-footprint.png" class="lazyload" width="4032" height="3024"></p>
+<p>On the picture above, you can see in detail the calculation, step by step, of the pollution due to the streaming of a film in average in the world (70 gCO2/eq).</p>
+<p>This methodology can also be found in detail on our <a href="https://github.com/NMF-earth/nmf-app">Github</a>.</p>
+
+                <div class="mb-10 mt-20">
+                    <p class="font-light mb-5 italic text-gray-800">Published : Oct 11, 2020</p>
+                    <div class="flex flex-wrap">
+                        
+                            <p class="badge mb-3 font-light select-none">Climate Change</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Climate action</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Carbon footprint</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Calculation</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Streaming</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Transport</p>
+                        
+                            <p class="badge mb-3 font-light select-none">Food</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+                <div div="flex">
+                    <a aria-label="donate" target="_blank" href="https://ko-fi.com/pierrebresson">
+                        <p class="mt-3">Donate to NMF.earth</p>
+                    </a>
+                </div>
+            
+        </article>
+    </div>
+
+    </main>
+  
+<script>
+            (function (selector, src, preferNativeLazyLoad) {
+  var images = document.querySelectorAll(selector);
+  var numImages = images.length;
+
+  if (numImages > 0) {
+    if (preferNativeLazyLoad && 'loading' in HTMLImageElement.prototype) {
+      for (var i = 0; i < numImages; i++) {
+        var keys = ['src', 'srcset'];
+
+        for (var j = 0; j < keys.length; j++) {
+          if (images[i].hasAttribute('data-' + keys[j])) {
+            var value = images[i].getAttribute('data-' + keys[j]);
+            images[i].setAttribute(keys[j], value);
+          }
+        }
+      }
+
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = src;
+    document.body.appendChild(script);
+  }
+})(
+              'img',
+              'https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js',
+              false
+            );
+          </script></body></html>
